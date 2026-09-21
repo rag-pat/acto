@@ -84,13 +84,17 @@ def entries() -> list[dict]:
     return [json.loads(raw) for raw in r.mget(keys) if raw]
 
 
-def lookup(query: str, threshold: float = THRESHOLD) -> CacheHit | None:
+def lookup(
+    query: str,
+    vector: np.ndarray | None = None,
+    threshold: float = THRESHOLD,
+) -> CacheHit | None:
     cached = entries()
     if not cached:
         return None
 
     vectors = np.array([e["embedding"] for e in cached])
-    scores = vectors @ embed(query)
+    scores = vectors @ (embed(query) if vector is None else vector)
 
     best = int(np.argmax(scores))
     if scores[best] < threshold:
@@ -114,9 +118,15 @@ def load_sheet(path: str) -> int:
     return len(rows)
 
 
-def clear() -> int:
+def clear(source: str | None = None) -> int:
+    """Clear the cache, or just one source — the nightly flush drops 'harvested'."""
     r = _get_redis()
     keys = list(r.scan_iter(match=KEY_PREFIX + "*"))
+    if source is not None:
+        keys = [
+            k for k, raw in zip(keys, r.mget(keys))
+            if raw and json.loads(raw)["source"] == source
+        ]
     return r.delete(*keys) if keys else 0
 
 
