@@ -1,0 +1,31 @@
+question,label
+How do I book an appointment?,appointment
+Can I reschedule my visit to next week?,appointment
+I need to cancel my Thursday appointment,appointment
+What time does my appointment start?,appointment
+How early should I arrive for my visit?,appointment
+Where do I park for the clinic?,appointment
+How much will this visit cost me?,billing
+Is this procedure covered by my insurance?,billing
+I got a bill I do not understand,billing
+Can I set up a payment plan?,billing
+Do you accept my insurance plan?,billing
+Why was my claim denied?,billing
+How do I get a copy of my medical records?,records
+Where can I see my lab results?,records
+I need my immunization history,records
+How do I send my records to another doctor?,records
+Can I get a copy of my imaging report?,records
+I need a referral letter sent over,records
+I have had a headache for three days,clinical
+Should I stop taking my medication?,clinical
+Is this rash something to worry about?,clinical
+My chest feels tight when I walk,clinical
+What dose of ibuprofen is safe for me?,clinical
+Are these symptoms serious?,clinical
+What are your opening hours?,other
+Do you have wifi in the waiting room?,other
+How do I speak to a human?,other
+Can I bring someone with me?,other
+Is there a pharmacy in the building?,other
+What languages do your staff speak?,other
