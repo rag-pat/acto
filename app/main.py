@@ -3,6 +3,8 @@ import time
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from app.cache import lookup
+
 app = FastAPI(title="acto")
 
 
@@ -22,12 +24,16 @@ class QueryResponse(BaseModel):
 def query(req: QueryRequest) -> QueryResponse:
     start = time.perf_counter()
 
-    answer = f"hardcoded answer for: {req.query}"
+    hit = lookup(req.query)
+    if hit:
+        answer = hit.answer
+    else:
+        answer = f"hardcoded answer for: {req.query}"
 
     return QueryResponse(
         answer=answer,
         label="unclassified",
         model_used="none",
-        cache_hit=False,
+        cache_hit=hit is not None,
         latency_ms=round((time.perf_counter() - start) * 1000, 2),
     )
