@@ -1,0 +1,61 @@
+question,label
+How do I book an appointment?,appointment
+Can I reschedule my visit to next week?,appointment
+I need to cancel my Thursday appointment,appointment
+What time does my appointment start?,appointment
+How early should I arrive for my visit?,appointment
+Where do I park for the clinic?,appointment
+How much will this visit cost me?,billing
+Is this procedure covered by my insurance?,billing
+I got a bill I do not understand,billing
+Can I set up a payment plan?,billing
+Do you accept my insurance plan?,billing
+Why was my claim denied?,billing
+How do I get a copy of my medical records?,records
+Where can I see my lab results?,records
+I need my immunization history,records
+How do I send my records to another doctor?,records
+Can I get a copy of my imaging report?,records
+I need a referral letter sent over,records
+I have had a headache for three days,clinical
+Should I stop taking my medication?,clinical
+Is this rash something to worry about?,clinical
+My chest feels tight when I walk,clinical
+What dose of ibuprofen is safe for me?,clinical
+Are these symptoms serious?,clinical
+What are your opening hours?,other
+Do you have wifi in the waiting room?,other
+How do I speak to a human?,other
+Can I bring someone with me?,other
+Is there a pharmacy in the building?,other
+What languages do your staff speak?,other
+I want to change my visit date,appointment
+book me in with the cardiology team,appointment
+what should I do before my scan,appointment
+how do I check in when I arrive,appointment
+do I need to fast before my visit,appointment
+can I get an earlier slot,appointment
+what will I owe after insurance,billing
+explain this charge on my account,billing
+do you offer a discount for self pay,billing
+my deductible has not been met,billing
+send me an invoice copy,billing
+is preauthorization needed,billing
+I need my discharge paperwork,records
+share my file with my insurer,records
+print out my medication list,records
+when will my pathology report be ready,records
+I want my records released to me,records
+a form for school needs signing,records
+my throat has been sore and I have a fever,clinical
+the new pill makes me nauseous,clinical
+how long should this pain last,clinical
+is it safe to exercise after surgery,clinical
+my blood sugar keeps spiking,clinical
+I think I am having a reaction,clinical
+can I bring my service dog,other
+where do I drop off paperwork,other
+do you have interpreters available,other
+is the cafeteria open to visitors,other
+how do I leave feedback,other
+what is your mailing address,other

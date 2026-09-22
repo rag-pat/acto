@@ -19,19 +19,19 @@ from app.cache import embed
 
 EXAMPLES_PATH = Path(__file__).parent.parent / "data" / "labeled_examples.csv"
 
-_examples: dict[str, np.ndarray] | None = None
+# Cached per path, so the eval harness can hold two example sets at once.
+_examples: dict[Path, dict[str, np.ndarray]] = {}
 
 
 def load_examples(path: Path = EXAMPLES_PATH) -> dict[str, np.ndarray]:
     """label -> matrix of that label's example vectors."""
-    global _examples
-    if _examples is None:
+    if path not in _examples:
         by_label = defaultdict(list)
         with open(path, newline="") as f:
             for row in csv.DictReader(f):
                 by_label[row["label"]].append(embed(row["question"]))
-        _examples = {label: np.array(vecs) for label, vecs in by_label.items()}
-    return _examples
+        _examples[path] = {label: np.array(vecs) for label, vecs in by_label.items()}
+    return _examples[path]
 
 
 @dataclass
@@ -41,9 +41,13 @@ class Classification:
     scores: dict[str, float]
 
 
-def classify(query: str, vector: np.ndarray | None = None) -> Classification:
+def classify(
+    query: str,
+    vector: np.ndarray | None = None,
+    examples: dict[str, np.ndarray] | None = None,
+) -> Classification:
     vector = embed(query) if vector is None else vector
-    examples = load_examples()
+    examples = load_examples() if examples is None else examples
 
     # Best-matching example per label, rather than a centroid: a label can
     # cluster in several places and still be one label.

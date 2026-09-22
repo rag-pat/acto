@@ -1,0 +1,52 @@
+query,label
+I want to come in next Tuesday instead,appointment
+what time am I scheduled for,appointment
+can someone move my visit to the afternoon,appointment
+I am running late for my slot,appointment
+do I need to be there before my appointment time,appointment
+how far in advance do I need to book,appointment
+is there parking near the entrance,appointment
+I cannot make it tomorrow,appointment
+how do I set up a first visit,appointment
+can I see someone this week,appointment
+what is the soonest opening you have,appointment
+will my insurance cover this visit,billing
+I received a statement I did not expect,billing
+what is my copay going to be,billing
+can I pay this off over a few months,billing
+do you take Blue Cross,billing
+my claim came back rejected,billing
+how much does an MRI run without insurance,billing
+who do I talk to about a charge,billing
+is there financial assistance available,billing
+I need an itemized receipt,billing
+where do I find my bloodwork,records
+can you fax my chart to another clinic,records
+I need proof of my vaccinations,records
+how do I download my visit summary,records
+my results are not showing up online,records
+I need paperwork filled out for work,records
+can I get my x-ray images on a disc,records
+how long until my test comes back,records
+I need my history sent to a specialist,records
+who do I ask for a referral letter,records
+I have been dizzy since yesterday,clinical
+is it okay to double up on my pills,clinical
+my incision looks red and swollen,clinical
+should I go to the ER for this,clinical
+I keep waking up short of breath,clinical
+can I take this with my blood pressure medication,clinical
+my child has had a fever for two days,clinical
+is this amount of bleeding normal,clinical
+I feel worse than before I started treatment,clinical
+my ankle is swollen and I cannot walk on it,clinical
+are these side effects expected,clinical
+I have a lump that was not there last month,clinical
+what are your hours on the weekend,other
+is there somewhere to eat in the building,other
+can my husband come in with me,other
+do you have wheelchair access,other
+I want to talk to an actual person,other
+do your staff speak Spanish,other
+where is the main entrance,other
+is there a place to charge my phone,other
